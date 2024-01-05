@@ -1,0 +1,341 @@
+:root {
+  --main-color: #00008b;
+  --second-color: #e1dede;
+  --main-font: "Arial", sans-serif;
+  --black: #333;
+  --white: #fff;
+  --light-color: #666;
+  --light-bg: #ffffff;
+  --text-color: white;
+  --text-gray: #fefefe;
+  --text-heading-gray: #d0d0f7;
+  --background: #edf0f9;
+  --border: #aabfff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+/* Nav-bar */
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-bar header {
+  font-size: 2rem;
+}
+
+.nav-bar a,
+.nav-menu {
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+  transition-duration: 0.6s;
+}
+.nav-menu {
+  display: flex;
+  gap: 40px;
+  font-size: 1.2em;
+  transition-duration: 0.6s;
+}
+.nav-menu a:hover {
+  color: var(--main-color);
+}
+.nav-menu a:active {
+  color: #00008b;
+}
+
+/* Nav-bar end */
+
+/* Hero  */
+
+.full {
+  height: 100vh;
+  background: url(../images/home.webp) no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-content {
+  margin-top: 100px;
+}
+
+.hero-content h2 {
+  text-transform: capitalize;
+  font-family: var(--main-font);
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--second-color);
+}
+
+.hero-content button {
+  background: transparent;
+  color: var(--second-color);
+  border: 2px solid var(--second-color);
+  margin-top: 80px;
+  height: 50px;
+  width: 180px;
+  outline: none;
+  transition: 0.6s;
+}
+
+.hero-content button:hover {
+  cursor: pointer;
+  color: var(--main-color);
+  border: 3px solid var(--main-color);
+  box-shadow: 10px 10px var(--main-color);
+  font-weight: 700;
+}
+
+/* Hero end */
+
+/* services*/
+.services {
+  height: 140dvh;
+  padding: 10px 20px;
+  background: #eff2ff;
+  font-family: var(--main-font);
+}
+
+.service-content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #242a56;
+  gap: 40px;
+}
+
+.service-content h2 {
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.service-content h3 {
+  width: 600px;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.service-list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 380px);
+}
+
+.service {
+  display: block;
+  background: #ffffff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 10px 10px var(--main-color);
+}
+.service h3 {
+  margin-top: 20px;
+  width: auto;
+  padding: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+.service p {
+  margin-top: -10px;
+  padding: 20px;
+  color: black;
+}
+
+.service button {
+  background: transparent;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  height: 50px;
+  width: 180px;
+  outline: none;
+  transition: 0.6s;
+}
+
+.service button:hover {
+  cursor: pointer;
+
+  border: 3px solid var(--main-color);
+  box-shadow: 10px 10px var(--main-color);
+  font-weight: 700;
+}
+/* services end*/
+
+/* footer containers */
+footer {
+  bottom: 0px;
+  background-color: var(--main-color);
+  width: 100%;
+  min-width: 300px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  width: 100%;
+  padding: 16px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 4;
+  gap: 48px 16px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 250px;
+  padding: 24px 8px 36px 8px;
+}
+
+.footer-columns section,
+.footer-columns .footer-logo {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 160px;
+  max-width: 160px;
+}
+
+.footer-columns ul {
+  display: flex;
+  gap: 12px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.footer-columns ul a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer-columns ul a:hover {
+  text-decoration: underline;
+}
+
+.footer-columns h3 {
+  color: var(--text-heading-gray);
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 48px;
+  display: flex;
+  align-items: end;
+  width: 100%;
+  gap: 16px;
+  padding: 16px 0px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--text-color);
+  border-top: 1px solid var(--border);
+}
+
+.footer-bottom > small {
+  font-size: 16px;
+  margin: 0 4px;
+}
+
+.footer-headline > h2 {
+  margin: 0px;
+  color: var(--text-primary);
+}
+
+.footer-headline > p {
+  color: var(--text-color);
+  margin: 4px 0px 20px 0px;
+}
+
+.footer-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-description h3 {
+  margin-bottom: 8px;
+}
+
+/*? socials */
+
+.social-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  padding: 8px 0px;
+  justify-content: center;
+  margin-bottom: 16px;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+.social-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style-type: none;
+}
